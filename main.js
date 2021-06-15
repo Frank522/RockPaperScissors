@@ -1,45 +1,59 @@
 function computerPlay()  {
     let value = 3 * Math.random();
     if(value < 1) {
-        "Scissors"
+        return "scissors";
     } else if(value < 2){
-        return "Rock";
+        return "rock";
     } else{
-        return "Paper";
+        return "paper";
     }
 }
 
 function playRound(playerSelection, computerSelection){
+    playerSelection = playerSelection.toLowerCase();
+    computerSelection = computerSelection.toLowerCase();
+    console.log(playerSelection);
+    console.log(computerSelection);
     switch(playerSelection){
-        case "Scissors":
+        case "scissors":
             switch(computerSelection) {
-                case "Scissors":
-                    return "Tie!" + playerSelection + " ties with " + computerSelection;
-                case "Rock":
-                    return "You Lose!" + computerSelection + " beats " + playerSelection;
-                case "Paper":
-                    return "You Win!" + playerSelection + " beats " + computerSelection;
+                case "scissors":
+                    return "Tie, " + playerSelection + " ties with " + computerSelection;
+                case "sock":
+                    return "You Lose, " + computerSelection + " beats " + playerSelection;
+                case "paper":
+                    return "You Win, " + playerSelection + " beats " + computerSelection;
             }
-        case "Rock":
+        case "rock":
             switch(computerSelection) {
-                case "Rock":
-                    return "Tie!" + playerSelection + " ties with " + computerSelection;
-                case "Paper":
-                    return "You Lose!" + computerSelection + " beats " + playerSelection;
-                case "Scissors":
-                    return "You Win!" + playerSelection + " beats " + computerSelection;
+                case "rock":
+                    return "Tie, " + playerSelection + " ties with " + computerSelection;
+                case "paper":
+                    return "You Lose, " + computerSelection + " beats " + playerSelection;
+                case "scissors":
+                    return "You Win, " + playerSelection + " beats " + computerSelection;
             }
-        case "Paper":
+        case "paper":
             switch(computerSelection) {
-                case "Paper":
-                    return "Tie!" + playerSelection + " ties with " + computerSelection;
-                case "Scissors":
-                    return "You Lose!" + computerSelection + " beats " + playerSelection;
-                case "Rock":
-                    return "You Win!" + playerSelection + " beats " + computerSelection;
+                case "paper":
+                    return "Tie, " + playerSelection + " ties with " + computerSelection;
+                case "scissors":
+                    return "You Lose, " + computerSelection + " beats " + playerSelection;
+                case "rock":
+                    return "You Win, " + playerSelection + " beats " + computerSelection;
             }
     }
 }
 
 
-console.log(computerPlay());
+
+
+function PlayGame(){
+    for(let i=0; i<5; i++){
+        let playerChoice = prompt("Rock, Paper or Scissors: ");
+        let computerChoice = computerPlay();
+        console.log(playRound(playerChoice, computerChoice));
+    }
+}
+
+PlayGame();
