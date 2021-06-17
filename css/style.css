@@ -1,0 +1,82 @@
+h3 {
+    font-size: 50px;
+}
+
+h6 {
+    font-size: 20px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: rgb(49, 49, 49);
+    justify-content: space-between;
+    align-items: center;
+}
+
+h3, h6, p , table{
+    color: white;
+}
+
+header {
+    width: 80%;
+
+}
+
+header h3, header h6{
+    display: flex;
+    justify-content: center;
+
+}
+
+div.inputs {
+    display: flex;
+    justify-content: center;
+}
+
+div.inputs button {
+    margin: 20px;
+    padding: 20px;
+    background-color: green;
+    border: darkgreen 2px solid;
+    border-radius: 5px;
+    width: 100px;
+}
+
+div.results {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+}
+
+table{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    align-items: center;
+}
+
+tr {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width : 80%;
+}
+
+th, td {
+    margin: 5px 20px;
+}
+
+button#start {
+    margin: 20px;
+    padding: 20px;
+    background-color: blue;
+    border: lightblue 2px solid;
+    border-radius: 5px;
+    width: 100px;
+}
+
+
+
